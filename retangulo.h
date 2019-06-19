@@ -6,7 +6,6 @@ private:
     data x,y,x0,y0;
 public:
     Retang(data a,data b, data c, data d);
-    void show();
     int largura(){
         return y0-y;
     }
@@ -23,6 +22,11 @@ public:
         int c = 2*(x0 + altura());
     return q + c;
     }
-
+    void show(){
+    for(int i= 0; i< largura(); i++){
+        std::cout << "--";
+    }
+    std::cout<<std::endl;
+}
 };
 #endif
