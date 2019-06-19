@@ -13,20 +13,23 @@ public:
         return x0-x;
     }
     int area(){
-        int n;
-        n = largura() * altura();
-        return n;
+        return largura() * altura();
     }
     int perimetro(){
-        int q = 2*(y0 + largura());
-        int c = 2*(x0 + altura());
+        int q = 2*largura();
+        int c = 2*altura();
     return q + c;
     }
     void show(){
-    for(int i= 0; i< largura(); i++){
-        std::cout << "--";
-    }
+        for(int i= 0; i< largura(); i++){
+            std::cout << "|";
+            for(int h= 0; h< largura(); h++){
+                std::cout << "--";
+            }
+            std::cout << "|";
+            std::cout<<std::endl;
+        }
     std::cout<<std::endl;
-}
+    }
 };
 #endif
